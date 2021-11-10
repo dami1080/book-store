@@ -1,11 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classes from './BookItem.module.css';
 
-const BookItem = () => {
+const BookItem = (props) => {
+  const { category, title, author } = props;
+
   return (
-    <div>
-      <h1>Book Item</h1>
+    <div className={classes.items}>
+      <div>
+        <li className={classes.category}>{category}</li>
+        <li className={classes.title}>{title}</li>
+        <li className={classes.author}>{author}</li>
+      </div>
+      <button type="button" className={classes.remove}>Remove</button>
     </div>
   );
-}
-
-export default BookItem; 
+};
+BookItem.propTypes = {
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+};
+export default BookItem;
