@@ -10,5 +10,16 @@ html {
 
 body {
   margin: 0;
-  background-color: #3f3f3f;
+  background-color: #fafafa;
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 2rem 6rem;
+}
+
