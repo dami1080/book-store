@@ -1,11 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Navbar from './components/Navbar';
+import store from './redux/configureStore';
 import Categories from './components/Categories';
 import AllBooks from './components/AllBooks';
 
 function App() {
   return (
+    <Provider store={store}>
     <div className="App">
       <Navbar />
       <Switch>
@@ -17,6 +20,7 @@ function App() {
         </Route>
       </Switch>
     </div>
+    </Provider>
   );
 }
 
