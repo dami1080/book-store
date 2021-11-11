@@ -1,48 +1,25 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.css';
-import Books from './components/Books/Books';
+import Navbar from './components/Navbar';
+import Books from './components/Books';
 import Categories from './components/Categories';
-import NavBar from './components/Layout/NavBar';
+import BookInput from './components/BookInput';
 
 function App() {
-  const data = [
-    {
-      id: 1,
-      category: 'Action',
-      title: 'The Hunger games',
-      author: 'Suzanne Collins',
-    },
-    {
-      id: 2,
-      category: 'Science Fiction',
-      title: 'Dune',
-      author: 'Frank Herbert',
-    },
-    {
-      id: 3,
-      category: 'Economy',
-      title: 'Capital in the Twenty-First Century',
-      author: 'Suzanne Collins',
-    },
-  ];
-
   return (
-    <div>
-      <NavBar />
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <Books items={data} />
-          </Route>
-          <Route path="/categories">
-            <Categories />
-          </Route>
-        </Switch>
-      </main>
+    <div className="App">
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Books />
+          <BookInput />
+        </Route>
+        <Route path="/categories">
+          <Categories />
+        </Route>
+      </Switch>
     </div>
   );
 }
 
 export default App;
-
