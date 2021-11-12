@@ -30,6 +30,7 @@
             }
         ],
         "react/react-in-jsx-scope": "off",
+        "react/destructuring-assignment": "off",
         "import/no-unresolved": "off",
         "no-shadow": "off"
     },
