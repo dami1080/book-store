@@ -9,17 +9,17 @@ import AllBooks from './components/AllBooks';
 function App() {
   return (
     <Provider store={store}>
-    <div className="App">
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <AllBooks />
-        </Route>
-        <Route path="/categories">
-          <Categories />
-        </Route>
-      </Switch>
-    </div>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <AllBooks />
+          </Route>
+          <Route path="/categories">
+            <Categories />
+          </Route>
+        </Switch>
+      </div>
     </Provider>
   );
 }

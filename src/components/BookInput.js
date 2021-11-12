@@ -5,7 +5,7 @@ const BookInput = (props) => {
   const [input, setInput] = useState({
     title: '',
     author: '',
-  })
+  });
 
   const onChange = (e) => {
     setInput({
@@ -27,9 +27,9 @@ const BookInput = (props) => {
 
   return (
     <section>
-    <h2>Add New Book</h2>
+      <h2>Add New Book</h2>
 
-    <form className="form" onSubmit={handleSubmit} >
+      <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Book Title"
@@ -46,14 +46,14 @@ const BookInput = (props) => {
           onChange={onChange}
           required
         />
-      <button type="submit" className="submit-btn">Add Book</button>
-    </form>
+        <button type="submit" className="submit-btn">Add Book</button>
+      </form>
     </section>
-  )
-}
+  );
+};
 
 BookInput.propTypes = {
   propsToAddBooks: PropTypes.func.isRequired,
-}
+};
 
 export default BookInput;
