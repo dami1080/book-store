@@ -30,6 +30,10 @@ Clone the project:
 git clone https://github.com/dami1080/book-store.git
 ```
 
+## Live Demo Links
+
+🔗 [BookStore](https://suspicious-sinoussi-6cae2a.netlify.app)
+
 ### Run project
 
 Install dependencies:
